@@ -1,0 +1,30 @@
+{
+	"agcgw":{
+		"backurl":"connect-dre.dbankcloud.cn",
+		"url":"connect-dre.hispace.hicloud.com"
+	},
+	"client":{
+		"cp_id":"2640020000002545094",
+		"product_id":"736430079244556404",
+		"client_id":"402870143375377600",
+		"client_secret":"61E7AA1D3294BD570E92E7FA4EC5DFAF414771A8B86B4146A20BD6B418840B74",
+		"app_id":"102537717",
+		"package_name":"abdelrahman.wifianalyzerpro",
+		"api_key":"CgB6e3x9GlI/aJaqgIUPQBzXJ9HRBgJHByvydA6vRoJArmSlIVFGEohVtuTMwK3wJYUO5ZKU3R9FiBuExGDYfCWF"
+	},
+	"service":{
+		"analytics":{
+			"collector_url":"datacollector-dre.dt.hicloud.com,datacollector-dre.dt.dbankcloud.cn",
+			"resource_id":"p1",
+			"channel_id":""
+		},
+		"cloudstorage":{
+			"storage_url":"https://ops-dre.agcstorage.link"
+		},
+		"ml":{
+			"mlservice_url":"ml-api-dre.ai.dbankcloud.com,ml-api-dre.ai.dbankcloud.cn"
+		}
+	},
+	"region":"DE",
+	"configuration_version":"1.0"
+}

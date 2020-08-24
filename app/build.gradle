@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+// Add the following line
+apply plugin: 'com.huawei.agconnect'  // HUAWEI agconnect Gradle plugin
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId "abdelrahman.wifianalyzerpro"
+        minSdkVersion 17
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        config {
+            keyAlias 'key0'
+            keyPassword 'shemo71'
+            storeFile file('E:\\keystore2.jks')
+            storePassword 'shemo71'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.config
+        }
+        release {
+            signingConfig signingConfigs.config
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+   /* signingConfigs {
+        release {
+            storeFile file('F:\\keystore.jks')
+            keyAlias 'WiFi Analyzer'
+            keyPassword 'shimaa71'
+            storePassword 'shimaa71'
+
+
+        }
+        debug {
+            keyAlias 'key0'
+            keyPassword 'shemo71'
+            storeFile file('E:\\keystore2.jks')
+            storePassword 'shemo71'
+        }
+
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+
+        }
+
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            debuggable true
+        }
+
+    }*/
+
+
+
+    android {
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    // Add the following line
+    implementation 'com.huawei.hms:push:5.0.0.300'
+
+    implementation 'com.huawei.agconnect:agconnect-core:1.3.1.300'
+}
